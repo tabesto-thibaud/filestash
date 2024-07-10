@@ -107,11 +107,13 @@ func (this S3Backend) LoginForm() Form {
 				Name:        "access_key_id",
 				Type:        "text",
 				Placeholder: "Access Key ID*",
+				Value: 		 os.getenv("AWS_ACCESS_KEY_ID"),
 			},
 			FormElement{
 				Name:        "secret_access_key",
 				Type:        "password",
 				Placeholder: "Secret Access Key*",
+				Value: 		 os.getenv("AWS_SECRET_ACCESS_KEY"),
 			},
 			FormElement{
 				Name:        "advanced",
@@ -127,24 +129,28 @@ func (this S3Backend) LoginForm() Form {
 				Name:        "region",
 				Type:        "text",
 				Placeholder: "Region",
+				Value: 		 os.getenv("AWS_DEFAULT_REGION"),
 			},
 			FormElement{
 				Id:          "s3_endpoint",
 				Name:        "endpoint",
 				Type:        "text",
 				Placeholder: "Endpoint",
+				Value: 		 os.getenv("AWS_ENDPOINT_URL"),
 			},
 			FormElement{
 				Id:          "s3_role_arn",
 				Name:        "role_arn",
 				Type:        "text",
 				Placeholder: "Role ARN",
+				Value: 		 os.getenv("AWS_ROLE_ARN"),
 			},
 			FormElement{
 				Id:          "s3_session_token",
 				Name:        "session_token",
 				Type:        "text",
 				Placeholder: "Session Token",
+				Value: 		 os.getenv("AWS_SESSION_TOKEN"),
 			},
 			FormElement{
 				Id:          "s3_path",
